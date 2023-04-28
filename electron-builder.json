@@ -1,0 +1,58 @@
+{
+  "productName": "立体骨組構造解析ソフト",
+  "directories": {
+    "output": "release/"
+  },
+  "files": [
+    "**/*",
+    "!**/*.ts",
+    "!*.code-workspace",
+    "!LICENSE.md",
+    "!package.json",
+    "!package-lock.json",
+    "!src/",
+    "!e2e/",
+    "!hooks/",
+    "!angular.json",
+    "!_config.yml",
+    "!karma.conf.js",
+    "!tsconfig.json",
+    "!tslint.json"
+  ],
+  "extraResources": [
+    {
+      "from": "dist",
+      "to": "app",
+      "filter": [
+        "**/*"
+      ]
+    }
+  ],
+  "win": {
+    "icon": "dist/assets/icons",
+    "publisherName": "MALME INC.",
+    "certificateFile": "C:/Users/81806/set/setting.pfx",
+    "certificatePassword": "1610701250",
+    "target": "nsis",
+    "asar": false
+  },
+  "mac": {
+    "icon": "dist",
+    "target": [
+      "dmg"
+    ]
+  },
+  "linux": {
+    "icon": "dist",
+    "target": [
+      "AppImage"
+    ]
+  },
+  "publish": [
+    {
+      "provider": "github",
+      "owner": "structuralengine",
+      "repo": "FrameWebforJS"
+    }
+  ]
+}

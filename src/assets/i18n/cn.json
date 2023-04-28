@@ -1,0 +1,348 @@
+{
+    "app": {
+        "node": "节点",
+        "fixNode": "支点",
+        "member": "构件",
+        "element": "材料",
+        "panel": "面板",
+        "joint": "连接",
+        "noticePoint": "焦距点",
+        "fixMember": "弹簧",
+        "loadName": "载重",
+        "inputDefine": "组合",
+        "input": "输入",
+        "displacement": "位移",
+        "reaction": "支座反力",
+        "memberSectionForce": "构件截面力",
+        "output": "输出",
+        "preparing": "准备打印"
+    },
+    "menu": {
+        "softName": "分析立体构架的软件程式",
+        "newEntry": "创建新的",
+        "openFile": "打开档案",
+        "saveFile": "保存档案",
+        "overwrite": "覆盖保存",
+        "outputFile": "聚集输出",
+        "logout": "登出",
+        "login": "登录",
+        "P_login": "请登录",
+        "calc_start": "开始计算",
+        "success": "沟通成功!!",
+        "deduct_points": "消耗的积分。今天的使用量是",
+        "new_points": "分。"
+    },
+    "input": {
+        "input-fix-node": {
+            "node": "节点",
+            "displacementRestraint": "位移约束",
+            "x_direction": "X方向",
+            "y_direction": "Y方向",
+            "z_direction": "Z方向",
+            "rotationalRestraint": "旋转约束",
+            "x_around": "围绕X轴",
+            "y_around": "围绕Y轴",
+            "z_around": "围绕Z轴",
+            "No": "编码"
+        },
+        "input-members": {
+            "node": "节点",
+            "node_i": "i端",
+            "node_j": "j端",
+            "distance": "构件长",
+            "material": "材料",
+            "codeAngle": "转动角度",
+            "material_name": "材料名称",
+            "No": "编码"
+        },
+        "input-elements": {
+            "elastic": "弹性系数",
+            "shear_elastic": "剪力弹性系数",
+            "cte": "膨胀系数",
+            "area": "截面面积",
+            "torsionConstant": "扭转常数",
+            "inertia": "截面二次力矩",
+            "material_name": "名称"
+        },
+        "input-panel": {
+            "materialNo": "材料编码",
+            "nodeNo": "顶点编码"
+        },
+        "input-joint": {
+            "member": "构件",
+            "node_i": "i端",
+            "node_j": "j端",
+            "memberNo": "构件编码",
+            "No": "编码"
+        },
+        "input-notice-points": {
+            "memberNo": "构件编码",
+            "distance": "构件长\n(m)",
+            "distance_from_node_i": "从i端计算的距离(m)"
+        },
+        "input-fix-member": {
+            "member": "构件",
+            "displacementRestraint": "位移约束 (kN/m/m)",
+            "v_axis": "构件轴向",
+            "y_axis": "构件Y轴",
+            "z_axis": "构件Z轴",
+            "rotationalRestraint": "旋转约束",
+            "r_axis": "垂直于轴的方向",
+            "No": "编码"
+        },
+        "input-load-name": {
+            "cf": "附加系数",
+            "symbol": "符号",
+            "name": "名称",
+            "fixNode": "支点",
+            "crossSection": "截面",
+            "fixMember": "弹簧",
+            "joint": "连接",
+            "load_Name": "载重名称",
+            "loadStrength": "载重负荷"
+        },
+        "input-load": {
+            "memberLoad": "要件荷重",
+            "memberNo": "构件编码",
+            "direction": "方向",
+            "mark": "标记",
+            "nodeLoad": "节点载重",
+            "node": "节点",
+            "load_Name": "载重名称",
+            "loadStrength": "载重负荷",
+            "No": "编码"
+        },
+        "input-define": {
+            "DEFINE": "定义",
+            "COMBINE": "组合",
+            "PICKUP": "聚集"
+        },
+        "input-combine": {
+            "name": "名称　　　　　　　　　　　　　　",
+            "DEFINE": "定义",
+            "COMBINE": "组合",
+            "PICKUP": "聚集"
+        },
+        "input-pickup": {
+            "name": "名称　　　　　　　　　　　　　　",
+            "DEFINE": "定义",
+            "COMBINE": "组合",
+            "PICKUP": "聚集"
+        }
+    },
+    "result": {
+        "COMBINE": "组合",
+        "PICKUP": "聚集",
+        "result-fsec": {
+            "basicCase": "基本载重案例",
+            "memberNo": "构件编码",
+            "nodeNo": "节点编码",
+            "stationLocation": "着眼位置\n(m)",
+            "axialForce": "轴向力\n(kN)",
+            "y_shear": " y轴方向的\n剪力\n(kN)",
+            "z_shear": " z轴方向的\n剪力\n(kN)",
+            "x_torsion": "扭转\n力矩\n(kN m)",
+            "y_moment": "绕y轴的\n弯矩\n(kN m)",
+            "z_moment": "绕z轴的\n弯矩\n(kN m)",
+            "shear": "剪力\n(kN)",
+            "moment": "弯矩\n(kN m)"
+        },
+        "result-combine-fsec": {
+            "basicCase": "基本载重案例",
+            "memberNo": "构件编码",
+            "nodeNo": "节点编码",
+            "stationLocation": "着眼位置\n(m)",
+            "axialForce": "轴向力\n(kN)",
+            "y_shear": " y轴方向的\n剪力\n(kN)",
+            "z_shear": " z轴方向的\n剪力\n(kN)",
+            "x_torsion": "扭转\n力矩\n(kN m)",
+            "y_moment": "绕y轴的\n弯矩\n(kN m)",
+            "z_moment": "绕z轴的\n弯矩\n(kN m)",
+            "shear": "剪力\n(kN)",
+            "moment": "弯矩\n(kN m)",
+            "comb": "组合"
+        },
+        "result-pickup-fsec": {
+            "basicCase": "基本载重案例",
+            "memberNo": "构件编码",
+            "nodeNo": "节点编码",
+            "stationLocation": "着眼位置\n(m)",
+            "axialForce": "轴向力\n(kN)",
+            "y_shear": " y轴方向的\n剪力\n(kN)",
+            "z_shear": " z轴方向的\n剪力\n(kN)",
+            "x_torsion": "扭转\n力矩\n(kN m)",
+            "y_moment": "绕y轴的\n弯矩\n(kN m)",
+            "z_moment": "绕z轴的\n弯矩\n(kN m)",
+            "shear": "剪力\n(kN)",
+            "moment": "弯矩\n(kN m)",
+            "comb": "组合"
+        },
+        "result-disg": {
+            "basicCase": "基本载重案例",
+            "x_movement": "x方向的\n移动量\n(mm)",
+            "y_movement": "y方向的\n移动量\n(mm)",
+            "z_movement": "z方向的\n移动量\n(mm)",
+            "x_rotation": "绕x轴的\n旋转量\n(‰rad)",
+            "y_rotation": "绕y轴的\n旋转量\n(‰rad)",
+            "z_rotation": "绕z轴的\n旋转量\n(‰rad)",
+            "No": "编码"
+        },
+        "result-combine-disg": {
+            "basicCase": "基本载重案例",
+            "x_movement": "x方向的\n移动量\n(mm)",
+            "y_movement": "y方向的\n移动量\n(mm)",
+            "z_movement": "z方向的\n移动量\n(mm)",
+            "x_rotation": "绕x轴的\n旋转量\n(‰rad)",
+            "y_rotation": "绕y轴的\n旋转量\n(‰rad)",
+            "z_rotation": "绕z轴的\n旋转量\n(‰rad)",
+            "comb": "组合",
+            "No": "编码"
+        },
+        "result-pickup-disg": {
+            "basicCase": "基本载重案例",
+            "x_movement": "x方向的\n移动量\n(mm)",
+            "y_movement": "y方向的\n移动量\n(mm)",
+            "z_movement": "z方向的\n移动量\n(mm)",
+            "x_rotation": "绕x轴的\n旋转量\n(‰rad)",
+            "y_rotation": "绕y轴的\n旋转量\n(‰rad)",
+            "z_rotation": "绕z轴的\n旋转量\n(‰rad)",
+            "comb": "组合",
+            "No": "编码"
+        },
+        "result-reac": {
+            "basicCase": "基本载重案例",
+            "nodeNo": "节点编码",
+            "x_SupportReaction": "x方向支座反力\n(kN)",
+            "y_SupportReaction": "y方向支座反力\n(kN)",
+            "z_SupportReaction": "z方向支座反力\n(kN)",
+            "x_RotationalReaction": "绕x轴的\n旋转反力\n(kN m)",
+            "y_RotationalReaction": "绕y轴的\n旋转反力\n(kN m)",
+            "z_RotationalReaction": "绕z轴的\n旋转反力\n(kN m)",
+            "comb": "组合",
+            "rotationalRestraint": "旋转\n约束力\n(kN m)"
+        },
+        "result-combine-reac": {
+            "basicCase": "基本载重案例",
+            "nodeNo": "节点编码",
+            "x_SupportReaction": "x方向支座反力\n(kN)",
+            "y_SupportReaction": "y方向支座反力\n(kN)",
+            "z_SupportReaction": "z方向支座反力\n(kN)",
+            "x_RotationalReaction": "绕x轴的\n旋转反力\n(kN m)",
+            "y_RotationalReaction": "绕y轴的\n旋转反力\n(kN m)",
+            "z_RotationalReaction": "绕z轴的\n旋转反力\n(kN m)",
+            "comb": "组合",
+            "rotationalRestraint": "旋转\n约束力\n(kN m)"
+        },
+        "result-pickup-reac": {
+            "basicCase": "基本载重案例",
+            "nodeNo": "节点编码",
+            "x_SupportReaction": "x方向支座反力\n(kN)",
+            "y_SupportReaction": "y方向支座反力\n(kN)",
+            "z_SupportReaction": "z方向支座反力\n(kN)",
+            "x_RotationalReaction": "绕x轴的\n旋转反力\n(kN m)",
+            "y_RotationalReaction": "绕y轴的\n旋转反力\n(kN m)",
+            "z_RotationalReaction": "绕z轴的\n旋转反力\n(kN m)",
+            "comb": "组合",
+            "rotationalRestraint": "旋转\n约束力\n(kN m)"
+        }
+    },
+    "login-dialog": {
+        "createAccount": "如果您尚未注册为用户，请单击此处",
+        "email": "电子邮件地址",
+        "password": "密码",
+        "login": "登录",
+        "cancel": "取消",
+        "mail_check": "电子邮件地址尚未确认。",
+        "fail": "登录失败。\n"
+    },
+    "print": {
+        "SelectPrintData": "选择打印数据",
+        "SelectPrintCase": "选择打印案例",
+        "inputData": "输入数据",
+        "displacement": "位移量",
+        "combine_displacement": "位移量（组合）",
+        "pickup_displacement": "位移量（聚集）",
+        "reaction": "反力",
+        "combine_reaction": "反力（组合）",
+        "pickup_reaction": "反力（聚集）",
+        "SectionForce": "截面力",
+        "combine_SectionForce": "截面力（组合）",
+        "pickup_SectionForce": "截面力（聚集）",
+        "PrintScreen": "打印屏幕",
+        "PrintDiagram": "截面力图",
+        "combPrintDiagram": "Combine 截面力图",
+        "pickPrintDiagram": "Pickup 截面力图",
+        "prt": "打印",
+        "pages": "预计张数:约",
+        "about": "张",
+        "noDataFound": "打印数据\n不存在",
+        "about1000": "请将页数限制在1000左右",
+        "custom": {
+            "print-custom-disg": {
+                "max": "最大",
+                "min": "最小",
+                "x_movement": "x方向的移动量",
+                "y_movement": "y方向的移动量",
+                "z_movement": "z方向的移动量",
+                "x_rotationalAngle": "绕x轴的旋转角度",
+                "y_rotationalAngle": "绕y轴的旋转角度",
+                "z_rotationalAngle": "绕z轴的旋转角度"
+            },
+            "print-custom-fsec": {
+                "selectArea": "选择打印范围",
+                "max": "最大",
+                "min": "最小",
+                "axialForce": "轴向力",
+                "y_shear": " y轴方向的剪力",
+                "z_shear": " z轴方向的剪力",
+                "x_torsion": "扭转力矩",
+                "y_moment": "绕y轴的力矩",
+                "z_moment": "绕z轴的力矩",
+                "distance": "构件长",
+                "material_name": "材料名称",
+                "target": "打印目标"
+            },
+            "print-custom-reac": {
+                "max": "最大",
+                "min": "最小",
+                "x_SupportReaction": "x方向支座反力",
+                "y_SupportReaction": "y方向支座反力",
+                "z_SupportReaction": "z方向支座反力",
+                "x_RotationalReaction": "绕x轴的旋转反力",
+                "y_RotationalReaction": "绕y轴的旋转反力",
+                "z_RotationalReaction": "绕z轴的旋转反力"
+            },
+            "print-custom-three": {
+                "selectTarget": "打印対象選択",
+                "axialForce": "轴向力",
+                "y_shear": " y轴方向的剪力",
+                "z_shear": " z轴方向的剪力",
+                "x_torsion": "扭转力矩",
+                "y_moment": "绕y轴的力矩",
+                "z_moment": "绕z轴的力矩",
+                "selectLayout": "Select print layout",
+                "splitHorizontal": "Split Horizontal",
+                "splitVertical": "Split Vertical",
+                "single": "Single Layout"
+            }
+        }
+    },
+    "providers": {
+        "input-data": {
+            "node_nodata": "没有节点数据",
+            "member_nodata": "没有构件数据",
+            "load_nodata": "没有载重数据",
+            "member": "构件",
+            "node": "节点",
+            "panel": "面板",
+            "memberNo": "构件编码",
+            "sectionNo": "截面号码",
+            "loadNo": "载重编码",
+            "nodeNo": "节点编码",
+            "elementNo": "要件编码",
+            "SupType": "支点种类",
+            "SprType": "弹簧种类",
+            "SupSpr": "没有支点或弹簧。"
+        }
+    }
+}

@@ -1,0 +1,92 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    // font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+html,
+body {
+    overflow: hidden;
+}
+
+.pq-resize-iframe {
+    display: none;
+}
+
+a[href="http://paramquery.com/pro"] {
+    display: none;
+}
+
+a[href="https://paramquery.com/pro"] {
+    display: none;
+}
+
+.obit-controls-gizmo {
+    position: absolute;
+    top: 150px;
+    right: 300px;
+    z-index: 2;
+}
+
+@media print {
+    .pq-resize-iframe {
+        display: none;
+    }
+    a[href="http://paramquery.com/pro"] {
+        display: none;
+    }
+    a[href="https://paramquery.com/pro"] {
+        display: none;
+    }
+    .obit-controls-gizmo {
+        display: none;
+    }
+    #chatplusview {
+        display: none !important;
+    }
+}
+
+@media print {
+    body {
+        overflow-y: visible;
+        overflow-x: visible;
+        page-break-after: always;
+    }
+}
+
+@page {
+    size: A4;
+}
+
+
+/* Importing Bootstrap SCSS file. */
+
+@import "~bootstrap/scss/bootstrap";
+@media print {
+    .isPrinting>* {
+        display: none;
+    }
+    .isPrinting app-print-layout {
+        display: block;
+    }
+}
+
+
+/* Add application styles & imports to this file! */
+
+@import url("https://unpkg.com/jquery-ui-pack@1.12.3/jquery-ui.css");
+@import url("https://unpkg.com/jquery-ui-pack@1.12.3/jquery-ui.structure.css");
+@import url("https://unpkg.com/jquery-ui-pack@1.12.3/jquery-ui.theme.css");
+@import url("https://unpkg.com/pqgrid@7.5.0/pqgrid.min.css");
+@import "~pqgrid/pqgrid.ui.min.css";
+@import "~pqgrid/themes/steelblue/pqgrid.css";
+
+/* Importing Bootstrap SCSS file. */
+
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Bootstrap SCSS file. */
+
+@import "~bootstrap/scss/bootstrap";

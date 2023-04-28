@@ -1,0 +1,224 @@
+<div class="floaterMenu">
+    <div class="btn-group">
+        <nav>
+            <a routerLink="/result-fsec" class="btn-change active">
+                <p translate>result.result-fsec.basicCase</p>
+            </a>
+            <a routerLink="/result-comb_fsec" [class]="btnCombine">
+                <p translate>result.COMBINE</p>
+            </a>
+            <a routerLink="/result-pic_fsec" [class]="btnPickup">
+                <p translate>result.PICKUP</p>
+            </a>
+        </nav>
+    </div>
+
+    <div class="pager">
+        <app-pager (event)="onReceiveEventFromChild($event)"></app-pager>
+    </div>
+</div>
+
+<div *ngIf="LL_page==false">
+    <p class="loadName normal">{{ load_name }}</p>
+
+    <div class="wrapper">
+        <div class="result_table">
+            <table #userinput id="userinput">
+                <thead>
+                    <div *ngIf="dimension===3">
+                        <tr>
+                            <th class="result-sm">
+                                <p translate>result.result-fsec.memberNo</p>
+                            </th>
+                            <th class="result-sm">
+                                <p translate>result.result-fsec.nodeNo</p>
+                            </th>
+                            <th class="result-lg">
+                                <p translate>result.result-fsec.stationLocation</p>
+                            </th>
+                            <th class="result-lg">
+                                <p translate>result.result-fsec.axialForce</p>
+                            </th>
+                            <th class="result-lg">
+                                <p translate>result.result-fsec.y_shear</p>
+                            </th>
+                            <th class="result-lg">
+                                <p translate>result.result-fsec.z_shear</p>
+                            </th>
+                            <th class="result-lg">
+                                <p translate>result.result-fsec.x_torsion</p>
+                            </th>
+                            <th class="result-lg">
+                                <p translate>result.result-fsec.y_moment</p>
+                            </th>
+                            <th class="result-lg">
+                                <p translate>result.result-fsec.z_moment</p>
+                            </th>
+                        </tr>
+                    </div>
+                    <div *ngIf="dimension===2">
+                        <tr>
+                            <th class="result-sm">
+                                <p translate>result.result-fsec.memberNo</p>
+                            </th>
+                            <th class="result-sm">
+                                <p translate>result.result-fsec.nodeNo</p>
+                            </th>
+                            <th class="result-lg">
+                                <p translate>result.result-fsec.stationLocation</p>
+                            </th>
+                            <th class="result-lg">
+                                <p translate>result.result-fsec.axialForce</p>
+                            </th>
+                            <th class="result-lg">
+                                <p translate>result.result-fsec.shear</p>
+                            </th>
+                            <th class="result-lg">
+                                <p translate>result.result-fsec.moment</p>
+                            </th>
+                        </tr>
+                    </div>
+                </thead>
+                <tbody>
+                    <div *ngIf="dimension===3">
+                        <tr *ngFor="let resultData of dataset; index as i">
+                            <td class="result-sm">{{ resultData.m }}</td>
+                            <td class="result-sm">{{ resultData.n }}</td>
+                            <td class="result-lg">{{ resultData.l }}</td>
+                            <td class="result-lg">{{ resultData.fx }}</td>
+                            <td class="result-lg">{{ resultData.fy }}</td>
+                            <td class="result-lg">{{ resultData.fz }}</td>
+                            <td class="result-lg">{{ resultData.mx }}</td>
+                            <td class="result-lg">{{ resultData.my }}</td>
+                            <td class="result-lg">{{ resultData.mz }}</td>
+                        </tr>
+                    </div>
+                    <div *ngIf="dimension===2">
+                        <tr *ngFor="let resultData of dataset; index as i">
+                            <td class="result-sm">{{ resultData.m }}</td>
+                            <td class="result-sm">{{ resultData.n }}</td>
+                            <td class="result-lg">{{ resultData.l }}</td>
+                            <td class="result-lg">{{ resultData.fx }}</td>
+                            <td class="result-lg">{{ resultData.fy }}</td>
+                            <td class="result-lg">{{ resultData.mz }}</td>
+                        </tr>
+                    </div>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="LL_page==true">
+    <div *ngFor="let r of KEYS; index as i">
+        <div *ngIf="i === cal">
+            <div class="wrapper">
+                <div class="carousel " id="carousel">
+                    <div class="card" id="pick">
+                        <div class="card-header">
+                            <p class="loadName">{{ load_name }}</p>
+                            <div class="detailName">
+                                <a id="prev" link="130" (click)="calPage('-1')" class="move" aria-label="previous"><i
+                                        class="fas fa-caret-left"></i></a>
+                                <ul class="move_case">
+                                    <li *ngFor="let i of circleBox">
+                                        <a class="circle" (click)="calPage(i)" [id]="i + 20"></a>
+                                    </li>
+                                </ul>
+                                <p class="detailTitle">{{ TITLES[i] }}</p>
+                                <a id="next" link="136" (click)="calPage('1')" class="move" aria-label="Next"><i
+                                        class="fas fa-caret-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="result_table">
+                                <table #userinput id="userinput">
+                                    <thead>
+                                        <div *ngIf="dimension===3">
+                                            <tr>
+                                                <th class="result-sm">
+                                                    <p translate>result.result-fsec.memberNo</p>
+                                                </th>
+                                                <th class="result-sm">
+                                                    <p translate>result.result-fsec.nodeNo</p>
+                                                </th>
+                                                <th class="result-lg">
+                                                    <p translate>result.result-fsec.stationLocation</p>
+                                                </th>
+                                                <th class="result-lg">
+                                                    <p translate>result.result-fsec.axialForce</p>
+                                                </th>
+                                                <th class="result-lg">
+                                                    <p translate>result.result-fsec.y_shear</p>
+                                                </th>
+                                                <th class="result-lg">
+                                                    <p translate>result.result-fsec.z_shear</p>
+                                                </th>
+                                                <th class="result-lg">
+                                                    <p translate>result.result-fsec.x_torsion</p>
+                                                </th>
+                                                <th class="result-lg">
+                                                    <p translate>result.result-fsec.y_moment</p>
+                                                </th>
+                                                <th class="result-lg">
+                                                    <p translate>result.result-fsec.z_moment</p>
+                                                </th>
+                                            </tr>
+                                        </div>
+                                        <div *ngIf="dimension===2">
+                                            <tr>
+                                                <th class="result-sm">
+                                                    <p translate>result.result-fsec.memberNo</p>
+                                                </th>
+                                                <th class="result-sm">
+                                                    <p translate>result.result-fsec.nodeNo</p>
+                                                </th>
+                                                <th class="result-lg">
+                                                    <p translate>result.result-fsec.stationLocation</p>
+                                                </th>
+                                                <th class="result-lg">
+                                                    <p translate>result.result-fsec.axialForce</p>
+                                                </th>
+                                                <th class="result-lg">
+                                                    <p translate>result.result-fsec.shear</p>
+                                                </th>
+                                                <th class="result-lg">
+                                                    <p translate>result.result-fsec.moment</p>
+                                                </th>
+                                            </tr>
+                                        </div>
+                                    </thead>
+                                    <tbody>
+                                        <div *ngIf="dimension===3">
+                                            <tr *ngFor="let resultData of dataset[i]">
+                                                <td class="result-sm">{{ resultData.m }}</td>
+                                                <td class="result-sm">{{ resultData.n }}</td>
+                                                <td class="result-lg">{{ resultData.l }}</td>
+                                                <td class="result-lg">{{ resultData.fx }}</td>
+                                                <td class="result-lg">{{ resultData.fy }}</td>
+                                                <td class="result-lg">{{ resultData.fz }}</td>
+                                                <td class="result-lg">{{ resultData.mx }}</td>
+                                                <td class="result-lg">{{ resultData.my }}</td>
+                                                <td class="result-lg">{{ resultData.mz }}</td>
+                                            </tr>
+                                        </div>
+                                        <div *ngIf="dimension===2">
+                                            <tr *ngFor="let resultData of dataset[i]">
+                                                <td class="result-sm">{{ resultData.m }}</td>
+                                                <td class="result-sm">{{ resultData.n }}</td>
+                                                <td class="result-lg">{{ resultData.l }}</td>
+                                                <td class="result-lg">{{ resultData.fx }}</td>
+                                                <td class="result-lg">{{ resultData.fy }}</td>
+                                                <td class="result-lg">{{ resultData.mz }}</td>
+                                            </tr>
+                                        </div>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

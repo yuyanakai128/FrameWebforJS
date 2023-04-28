@@ -1,0 +1,161 @@
+<div class="printdata-choice">
+  <h2 translate>print.custom.print-custom-three.selectTarget</h2>
+  <div class="print-choice">
+    <ng-container *ngIf="ResultData.isCalculated">
+      <ul>
+
+        <li>
+          <label style="width: 100%">
+            <input
+              type="checkbox"
+              name="checkbox-print"
+              class="checkbox-input"
+              id="printCus0"
+              [(ngModel)]="printCustomThreeService.threeEditable[0]"
+            />
+            <span class="checkbox-parts" translate>
+              print.custom.print-custom-three.axialForce
+            </span>
+          </label>
+        </li>
+
+        <li>
+          <label style="width: 100%">
+            <input
+              type="checkbox"
+              name="checkbox-print"
+              class="checkbox-input"
+              id="printCus1"
+              [(ngModel)]="printCustomThreeService.threeEditable[1]"
+            />
+            <span class="checkbox-parts" translate>
+              print.custom.print-custom-three.y_shear
+            </span>
+          </label>
+        </li>
+
+        <ng-container *ngIf="helper.dimension == 3">
+        
+          <li>
+            <label style="width: 100%">
+              <input
+                type="checkbox"
+                name="checkbox-print"
+                class="checkbox-input"
+                id="printCus2"
+                [(ngModel)]="printCustomThreeService.threeEditable[2]"
+              />
+              <span class="checkbox-parts" translate>
+                print.custom.print-custom-three.z_shear
+              </span>
+            </label>
+          </li>
+
+          <li>
+            <label style="width: 100%">
+              <input
+                type="checkbox"
+                name="checkbox-print"
+                class="checkbox-input"
+                id="printCus3"
+                [(ngModel)]="printCustomThreeService.threeEditable[3]"
+              />
+              <span class="checkbox-parts" translate>
+                print.custom.print-custom-three.x_torsion
+              </span>
+            </label>
+          </li>
+
+          <li>
+            <label style="width: 100%">
+              <input
+                type="checkbox"
+                name="checkbox-print"
+                class="checkbox-input"
+                id="printCus4"
+                [(ngModel)]="printCustomThreeService.threeEditable[4]"
+              />
+              <span class="checkbox-parts" translate>
+                print.custom.print-custom-three.y_moment
+              </span>
+            </label>
+          </li>
+
+        </ng-container>
+
+        <li>
+          <label style="width: 100%">
+            <input
+              type="checkbox"
+              name="checkbox-print"
+              class="checkbox-input"
+              id="printCus5"
+              [(ngModel)]="printCustomThreeService.threeEditable[5]"
+            />
+            <span class="checkbox-parts" translate>
+              print.custom.print-custom-three.z_moment
+            </span>
+          </label>
+        </li>
+
+      </ul>
+
+    </ng-container>
+  </div>
+</div>
+
+<div *ngIf="helper.dimension == 2" class="printdata-choice">
+  <h2 translate>print.custom.print-custom-three.selectLayout</h2>
+  <div class="print-choice">
+    <ng-container *ngIf="ResultData.isCalculated">
+
+      <ul>
+        
+        <li>
+          <label style="width: 100%">
+            <input
+              type="radio"
+              name="print-screen"
+              class="radio-input"
+              checked
+              id="result0"
+              (click)="selectRadio('splitHorizontal')"
+            />
+            <span class="radio-parts" translate>print.custom.print-custom-three.splitHorizontal</span>
+          </label>
+        </li>
+        
+        <li>
+          <label style="width: 100%">
+            <input
+              type="radio"
+              name="print-screen"
+              class="radio-input"
+              checked
+              id="result0"
+              (click)="selectRadio('splitVertical')"
+            />
+            <span class="radio-parts" translate>print.custom.print-custom-three.splitVertical</span>
+          </label>
+        </li>
+        
+        <li>
+          <label style="width: 100%">
+            <input
+              type="radio"
+              name="print-screen"
+              class="radio-input"
+              checked
+              id="result0"
+              (click)="selectRadio('single')"
+            />
+            <span class="radio-parts" translate>print.custom.print-custom-three.single</span>
+          </label>
+        </li>
+
+      </ul>
+ 
+
+    </ng-container>
+  </div>
+</div>

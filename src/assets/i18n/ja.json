@@ -1,0 +1,348 @@
+{
+    "app": {
+        "node": "節点",
+        "fixNode": "支点",
+        "member": "部材",
+        "element": "材料",
+        "panel": "パネル",
+        "joint": "結合",
+        "noticePoint": "着目点",
+        "fixMember": "バネ",
+        "loadName": "荷重",
+        "inputDefine": "組合せ",
+        "input": "入力",
+        "displacement": "変位",
+        "reaction": "支点反力",
+        "memberSectionForce": "部材断面力",
+        "output": "出力",
+        "preparing": "印刷の準備中"
+    },
+    "menu": {
+        "softName": "立体骨組構造解析ソフト",
+        "newEntry": "新規作成",
+        "openFile": "ファイルを開く",
+        "saveFile": "ファイルを保存",
+        "overwrite": "上書き保存",
+        "outputFile": "ピックアップファイル出力",
+        "logout": "ログアウト",
+        "login": "ログイン",
+        "P_login": "ログインしてください",
+        "calc_start": "計算を開始します",
+        "success": "通信成功!!",
+        "deduct_points": "ポイント消費しました。本日の使用量は、",
+        "new_points": "です。"
+    },
+    "input": {
+        "input-fix-node": {
+            "node": "節点",
+            "displacementRestraint": "変位拘束",
+            "x_direction": "X方向",
+            "y_direction": "Y方向",
+            "z_direction": "Z方向",
+            "rotationalRestraint": "回転拘束",
+            "x_around": "X軸回り",
+            "y_around": "Y軸回り",
+            "z_around": "Z軸回り",
+            "No": "No"
+        },
+        "input-members": {
+            "node": "節点",
+            "node_i": "i端",
+            "node_j": "j端",
+            "distance": "部材長",
+            "material": "材料",
+            "codeAngle": "コードアングル",
+            "material_name": "材料名称",
+            "No": "No"
+        },
+        "input-elements": {
+            "elastic": "弾性係数",
+            "shear_elastic": "せん断弾性係数",
+            "cte": "膨張係数",
+            "area": "断面積",
+            "torsionConstant": "ねじり定数",
+            "inertia": "断面二次モーメント",
+            "material_name": "名称"
+        },
+        "input-panel": {
+            "materialNo": "材料No",
+            "nodeNo": "頂点No."
+        },
+        "input-joint": {
+            "member": "部材",
+            "node_i": "i端",
+            "node_j": "j端",
+            "memberNo": "部材No",
+            "No": "No"
+        },
+        "input-notice-points": {
+            "memberNo": "部材No",
+            "distance": "部材長\n(m)",
+            "distance_from_node_i": "i-端からの距離(m)"
+        },
+        "input-fix-member": {
+            "member": "部材",
+            "displacementRestraint": "変位拘束 (kN/m/m)",
+            "v_axis": "部材軸方向",
+            "y_axis": "部材Y軸",
+            "z_axis": "部材Z軸",
+            "rotationalRestraint": "回転拘束",
+            "r_axis": "軸直角方向",
+            "No": "No"
+        },
+        "input-load-name": {
+            "cf": "割増し係数",
+            "symbol": "記号",
+            "name": "名称",
+            "fixNode": "支点",
+            "crossSection": "断面",
+            "fixMember": "バネ",
+            "joint": "結合",
+            "load_Name": "荷重名称",
+            "loadStrength": "荷重強度"
+        },
+        "input-load": {
+            "memberLoad": "要素荷重",
+            "memberNo": "部材No",
+            "direction": "方向",
+            "mark": "マーク",
+            "nodeLoad": "節点荷重",
+            "node": "節点",
+            "load_Name": "荷重名称",
+            "loadStrength": "荷重強度",
+            "No": "No"
+        },
+        "input-define": {
+            "DEFINE": "DEFINE",
+            "COMBINE": "COMBINE",
+            "PICKUP": "PICKUP"
+        },
+        "input-combine": {
+            "name": "名称　　　　　　　　　　　　　　",
+            "DEFINE": "DEFINE",
+            "COMBINE": "COMBINE",
+            "PICKUP": "PICKUP"
+        },
+        "input-pickup": {
+            "name": "名称　　　　　　　　　　　　　　",
+            "DEFINE": "DEFINE",
+            "COMBINE": "COMBINE",
+            "PICKUP": "PICKUP"
+        }
+    },
+    "result": {
+        "COMBINE": "COMBINE",
+        "PICKUP": "PICKUP",
+        "result-fsec": {
+            "basicCase": "基本ケース",
+            "memberNo": "部材No",
+            "nodeNo": "節点No",
+            "stationLocation": "着目位置\n(m)",
+            "axialForce": "軸方向力\n(kN)",
+            "y_shear": " y軸方向の\nせん断力\n(kN)",
+            "z_shear": " z軸方向の\nせん断力\n(kN)",
+            "x_torsion": "ねじり\nモーメント\n(kN m)",
+            "y_moment": "y軸回りの\n曲げモーメント\n(kN m)",
+            "z_moment": "z軸回りの\n曲げモーメント\n(kN m)",
+            "shear": "せん断力\n(kN)",
+            "moment": "曲げモーメント\n(kN m)"
+        },
+        "result-combine-fsec": {
+            "basicCase": "基本ケース",
+            "memberNo": "部材No",
+            "nodeNo": "節点No",
+            "stationLocation": "着目位置\n(m)",
+            "axialForce": "軸方向力\n(kN)",
+            "y_shear": " y軸方向の\nせん断力\n(kN)",
+            "z_shear": " z軸方向の\nせん断力\n(kN)",
+            "x_torsion": "ねじり\nモーメント\n(kN m)",
+            "y_moment": "y軸回りの\n曲げモーメント\n(kN m)",
+            "z_moment": "z軸回りの\n曲げモーメント\n(kN m)",
+            "shear": "せん断力\n(kN)",
+            "moment": "曲げモーメント\n(kN m)",
+            "comb": "組み合わせ"
+        },
+        "result-pickup-fsec": {
+            "basicCase": "基本ケース",
+            "memberNo": "部材No",
+            "nodeNo": "節点No",
+            "stationLocation": "着目位置\n(m)",
+            "axialForce": "軸方向力\n(kN)",
+            "y_shear": " y軸方向の\nせん断力\n(kN)",
+            "z_shear": " z軸方向の\nせん断力\n(kN)",
+            "x_torsion": "ねじり\nモーメント\n(kN m)",
+            "y_moment": "y軸回りの\n曲げモーメント\n(kN m)",
+            "z_moment": "z軸回りの\n曲げモーメント\n(kN m)",
+            "shear": "せん断力\n(kN)",
+            "moment": "曲げモーメント\n(kN m)",
+            "comb": "組み合わせ"
+        },
+        "result-disg": {
+            "basicCase": "基本ケース",
+            "x_movement": "x方向の\n移動量\n(mm)",
+            "y_movement": "y方向の\n移動量\n(mm)",
+            "z_movement": "z方向の\n移動量\n(mm)",
+            "x_rotation": "x軸回りの\n回転量\n(‰rad)",
+            "y_rotation": "y軸回りの\n回転量\n(‰rad)",
+            "z_rotation": "z軸回りの\n回転量\n(‰rad)",
+            "No": "No"
+        },
+        "result-combine-disg": {
+            "basicCase": "基本ケース",
+            "x_movement": "x方向の\n移動量\n(mm)",
+            "y_movement": "y方向の\n移動量\n(mm)",
+            "z_movement": "z方向の\n移動量\n(mm)",
+            "x_rotation": "x軸回りの\n回転量\n(‰rad)",
+            "y_rotation": "y軸回りの\n回転量\n(‰rad)",
+            "z_rotation": "z軸回りの\n回転量\n(‰rad)",
+            "comb": "組み合わせ",
+            "No": "No"
+        },
+        "result-pickup-disg": {
+            "basicCase": "基本ケース",
+            "x_movement": "x方向の\n移動量\n(mm)",
+            "y_movement": "y方向の\n移動量\n(mm)",
+            "z_movement": "z方向の\n移動量\n(mm)",
+            "x_rotation": "x軸回りの\n回転量\n(‰rad)",
+            "y_rotation": "y軸回りの\n回転量\n(‰rad)",
+            "z_rotation": "z軸回りの\n回転量\n(‰rad)",
+            "comb": "組み合わせ",
+            "No": "No"
+        },
+        "result-reac": {
+            "basicCase": "基本ケース",
+            "nodeNo": "節点No",
+            "x_SupportReaction": "x方向の支点反力\n(kN)",
+            "y_SupportReaction": "y方向の支点反力\n(kN)",
+            "z_SupportReaction": "z方向の支点反力\n(kN)",
+            "x_RotationalReaction": "x軸回りの\n回転反力\n(kN m)",
+            "y_RotationalReaction": "y軸回りの\n回転反力\n(kN m)",
+            "z_RotationalReaction": "z軸回りの\n回転反力\n(kN m)",
+            "comb": "組み合わせ",
+            "rotationalRestraint": "回転\n拘束力\n(kN m)"
+        },
+        "result-combine-reac": {
+            "basicCase": "基本ケース",
+            "nodeNo": "節点No",
+            "x_SupportReaction": "x方向の支点反力\n(kN)",
+            "y_SupportReaction": "y方向の支点反力\n(kN)",
+            "z_SupportReaction": "z方向の支点反力\n(kN)",
+            "x_RotationalReaction": "x軸回りの\n回転反力\n(kN m)",
+            "y_RotationalReaction": "y軸回りの\n回転反力\n(kN m)",
+            "z_RotationalReaction": "z軸回りの\n回転反力\n(kN m)",
+            "comb": "組み合わせ",
+            "rotationalRestraint": "回転\n拘束力\n(kN m)"
+        },
+        "result-pickup-reac": {
+            "basicCase": "基本ケース",
+            "nodeNo": "節点No",
+            "x_SupportReaction": "x方向の支点反力\n(kN)",
+            "y_SupportReaction": "y方向の支点反力\n(kN)",
+            "z_SupportReaction": "z方向の支点反力\n(kN)",
+            "x_RotationalReaction": "x軸回りの\n回転反力\n(kN m)",
+            "y_RotationalReaction": "y軸回りの\n回転反力\n(kN m)",
+            "z_RotationalReaction": "z軸回りの\n回転反力\n(kN m)",
+            "comb": "組み合わせ",
+            "rotationalRestraint": "回転\n拘束力\n(kN m)"
+        }
+    },
+    "login-dialog": {
+        "createAccount": "ユーザー登録がお済みでない方はこちらから",
+        "email": "メールアドレス",
+        "password": "パスワード",
+        "login": "ログイン",
+        "cancel": "キャンセル",
+        "mail_check": "メールアドレスが確認できていません。",
+        "fail": "ログインに失敗しました。\n"
+    },
+    "print": {
+        "SelectPrintData": "印刷データを選択",
+        "SelectPrintCase": "印刷ケースを選択",
+        "inputData": "入力データ",
+        "displacement": "変位量",
+        "combine_displacement": "COMBINE 変位量",
+        "pickup_displacement": "PICKUP 変位量",
+        "reaction": "反力",
+        "combine_reaction": "COMBINE 反力",
+        "pickup_reaction": "PICKUP 反力",
+        "SectionForce": "断面力",
+        "combine_SectionForce": "COMBINE 断面力",
+        "pickup_SectionForce": "PICKUP 断面力",
+        "PrintScreen": "画面印刷",
+        "PrintDiagram": "断面力図",
+        "combPrintDiagram": "Combine 断面力図",
+        "pickPrintDiagram": "Pickup 断面力図",
+        "prt": "印刷する",
+        "pages": "想定枚数:",
+        "about": "枚程度",
+        "noDataFound": "印刷データが\n存在しません",
+        "about1000": "ページ枚数を1000枚\n程度に抑えて下さい",
+        "custom": {
+            "print-custom-disg": {
+                "max": "最大",
+                "min": "最小",
+                "x_movement": "x方向の移動量",
+                "y_movement": "y方向の移動量",
+                "z_movement": "z方向の移動量",
+                "x_rotationalAngle": "x軸回りの回転角",
+                "y_rotationalAngle": "y軸回りの回転角",
+                "z_rotationalAngle": "z軸回りの回転角"
+            },
+            "print-custom-fsec": {
+                "selectArea": "印刷範囲の選択",
+                "max": "最大",
+                "min": "最小",
+                "axialForce": "軸方向力",
+                "y_shear": " y軸方向のせん断力",
+                "z_shear": " z軸方向のせん断力",
+                "x_torsion": "ねじりモーメント",
+                "y_moment": "y軸回りのモーメント",
+                "z_moment": "z軸回りのモーメント",
+                "distance": "部材長",
+                "material_name": "材料名称",
+                "target": "印刷対象"
+            },
+            "print-custom-reac": {
+                "max": "最大",
+                "min": "最小",
+                "x_SupportReaction": "x方向の支点反力",
+                "y_SupportReaction": "y方向の支点反力",
+                "z_SupportReaction": "z方向の支点反力",
+                "x_RotationalReaction": "x軸回りの回転反力",
+                "y_RotationalReaction": "y軸回りの回転反力",
+                "z_RotationalReaction": "z軸回りの回転反力"
+            },
+            "print-custom-three": {
+                "selectTarget": "印刷対象を選択",
+                "axialForce": "軸方向力",
+                "y_shear": " y軸方向のせん断力",
+                "z_shear": " z軸方向のせん断力",
+                "x_torsion": "ねじりモーメント",
+                "y_moment": "y軸回りのモーメント",
+                "z_moment": "z軸回りのモーメント",
+                "selectLayout": "レイアウトを選択",
+                "splitHorizontal": "上, 下",
+                "splitVertical": "左, 右",
+                "single": "シングル"
+            }
+        }
+    },
+    "providers": {
+        "input-data": {
+            "node_nodata": "節点データがありません",
+            "member_nodata": "部材データがありません",
+            "load_nodata": "荷重データがありません",
+            "member": "部材",
+            "node": "節点",
+            "panel": "パネル",
+            "memberNo": "部材No",
+            "sectionNo": "断面番号",
+            "loadNo": "荷重No",
+            "nodeNo": "節点No",
+            "elementNo": "要素No",
+            "SupType": "支点TYPE.",
+            "SprType": "バネTYPE.",
+            "SupSpr": "は、支点もバネもありません。"
+        }
+    }
+}

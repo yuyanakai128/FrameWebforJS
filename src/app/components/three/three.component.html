@@ -1,0 +1,12 @@
+<!-- <a class="camera" (click)="downloadImage()"><i class="fas fa-camera"></i></a> -->
+<div #screen id="screen">
+    <div id="screenArea">
+        <app-max-min></app-max-min>
+        <canvas #myCanvas id="myCanvas" style="overflow: hidden; position: absolute" (mousedown)="onMouseDown($event)" (mouseup)="onMouseUp($event)" (mousemove)="onMouseMove($event)">
+    </canvas>
+    </div>
+</div>
+<div id="download">
+    <img #img />
+    <a #downloadLink></a>
+</div>

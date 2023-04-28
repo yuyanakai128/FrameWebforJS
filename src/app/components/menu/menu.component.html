@@ -1,0 +1,88 @@
+<div class="title-and-menu" id="disTitle">
+    <div class="icon-area">
+        <ul>
+            <li>
+                <div ngbDropdown class="dropdownmenu">
+                    <a class="icon file" id="dropdownBasic1" ngbDropdownToggle onfocus="this.blur();"><i
+                            class="far fa-file"></i></a>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                        <button ngbDropdownItem (click)="renew()"translate>menu.newEntry</button>
+                        <ng-container  *ngIf="!electronService.isElectronApp">
+                            <label style="width: 100%; margin: 0px">
+                                <span ngbDropdownItem style="padding: 8px" translate>menu.openFile
+                                    <input type="file" accept="application/json" (change)="open($event)" style="display: none" />
+                                </span>
+                            </label>
+                        </ng-container>
+                        <button *ngIf="electronService.isElectronApp" ngbDropdownItem (click)="open_electron()" translate>
+                            menu.openFile
+                        </button> 
+                        <button ngbDropdownItem (click)="save()" translate>menu.saveFile</button>
+                        <button *ngIf="electronService.isElectronApp" ngbDropdownItem (click)="overWrite()" translate>menu.overwrite</button>
+                        <button *ngIf="ResultData.isCalculated" ngbDropdownItem (click)="pickup()"translate>menu.outputFile</button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a (click)="calcrate()"><i class="fas fa-calculator"></i></a>
+            </li>
+            <li>
+                <a routerLink="./print" (click)="contentsDailogShow(13)" routerLinkActive="selected-item" id="13"><i
+                        class="fi fi-print"></i></a>
+            </li>
+            <li>
+                <a (click)="goToLink()"><i class="far fa-question-circle"></i></a>
+            </li>
+            <li>
+                <div class="toggle toggle--switch">
+                    <input type="checkbox" id="toggle--switch" name="g2" class="toggle--checkbox" style="display: none;"
+                        (change)="setDimension()" checked>
+                    <label class="toggle--btn" for="toggle--switch"><span class="toggle--feature" data-label-on="3D"
+                            data-label-off="2D"></span></label>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+
+    <div class="title" *ngIf="fileName ===  '';then init; else file">
+    </div>
+    <ng-template #init>
+        <h1 >{{'menu.softName'| translate }} ver.{{version}}</h1>
+    </ng-template>
+    <ng-template #file>
+        <h1>{{fileName}}</h1>
+    </ng-template>
+
+    <div class="rightArea">
+        <div class="language-area">
+            <div ngbDropdown>
+                <a class="btn btn-outline-primary" id="language1" ngbDropdownToggle
+                    class="menu-btn lang">{{language.languageIndex[language.browserLang]}}</a>
+                <div ngbDropdownMenu aria-labelledby="language1">
+                    <ng-container *ngFor="let index of language.languageIndex | keyvalue">
+                        <a ngbDropdownItem (click)="language.trans(index.key)" class="menu-btn">{{index.value}}</a>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+
+        <div class="login-area">
+            <div *ngIf="auth.user | async as user; else showLogin" class="userInfo">
+                <div ngbDropdown>
+                    <a class="icon file" id="dropdownBasic1" class="menu-btn" ngbDropdownToggle
+                        onfocus="this.blur();"><i class="far fa-user-circle"></i>{{ user.displayName }}</a>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                        <a (click)="auth.signOut()" (click)="logOut()" class="menu-btn logOut"translate>menu.logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ng-template #showLogin>
+            <a (click)="logIn()" class="menu-btn">
+                <i class="fas fa-sign-in-alt"></i> 
+                <p translate>menu.login</p>
+            </a>
+        </ng-template>
+    </div>
+</div>

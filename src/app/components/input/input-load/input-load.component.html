@@ -1,0 +1,31 @@
+<div class="datasheet_inner" [style.width.px]="width">
+    <div class="boxContainer">
+        <div class="btn-group">
+            <nav>
+                <a routerLink="/input-load-name" routerLinkActive="selected-item" class="btn-change">
+                    <p translate>input.input-load.load_Name</p>
+                </a>
+                <a routerLink="/input-loads" routerLinkActive="selected-item" class="btn-change active">
+                    <p translate>input.input-load.loadStrength</p>
+                </a>
+            </nav>
+        </div>
+
+        <div class="pager">
+            <app-pager (event)="onReceiveEventFromChild($event)"></app-pager>
+        </div>
+
+        <div class="load-name">
+            <p>{{ load_name }}</p>
+        </div>
+    </div>
+
+    <div *ngIf="LL_flg === true">
+        <div class="LL_area">
+            <label class="label">ピッチ</label>
+            <input type="number" min="0.1" step="0.1" matInput matType="number" 
+                (change)="change_pich()" class="input"  [(ngModel)]="LL_pitch">
+        </div>
+    </div>
+    <app-sheet #grid [options]="options"></app-sheet>
+</div>
